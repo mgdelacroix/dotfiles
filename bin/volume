@@ -1,0 +1,6 @@
+#!/bin/sh
+
+MUSIC=♪
+
+VOLUME=`amixer get Master | grep 'dB' | cut -d ' ' -f 6`
+echo "$MUSIC $VOLUME"

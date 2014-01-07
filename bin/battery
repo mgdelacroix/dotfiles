@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Initially borrowed from : https://github.com/marsam/dotfiles
+# with some additions.
+
+HEART=♥
+
+# Is it `acpi` there?
+# TODO:  make this work
+#which acpi &> /dev/null
+#if [[ $? == 1 ]]; then
+    ## Probably a desktop computer or VM
+    #echo ☼
+#else
+# Cute battery status!
+BATTERY_STATUS=`acpi | awk '{print $4}' | tr -d ','`
+echo "$HEART $BATTERY_STATUS"
+#fi
