@@ -52,6 +52,7 @@ static const char *slock[]    = { "slock", NULL };
 
 static const char *upvol[] = { "amixer", "set", "Master", "1%+", NULL };
 static const char *downvol[] = { "amixer", "set", "Master", "1%-", NULL };
+static const char *nextsong[] = { "mpc", "next" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -89,6 +90,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    { ControlMask|ShiftMask,        XK_k,      spawn,          {.v = upvol } },
+    { ControlMask|ShiftMask,        XK_j,      spawn,          {.v = downvol } },
+    { ControlMask,                  XK_greater,      spawn,          {.v = nextsong } },
 };
 
 /* button definitions */
