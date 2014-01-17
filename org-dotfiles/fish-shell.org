@@ -40,10 +40,18 @@ First of all we have to set the base PATH variable:
   =fish_prompt=. As with the other functions, we will define it in
   the =~/.config/fish/functions/fish_prompt.fish= file.
 
-  My prompt is inspired on the one in [[http://www.youtube.com/watch?v=Uz_0i27wYbg&feature=youtu.be][this video]] (work in progress).
+  My prompt is inspired on the one in [[http://www.youtube.com/watch?v%3DUz_0i27wYbg][this video]].
 
   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/fish_prompt.fish :padline no
-        function fish_prompt
-            echo (prompt_pwd) '>>> '
-        end
+    function fish_prompt
+        set_color 6C7B8B
+        echo -n (prompt_pwd)
+        set_color red
+        echo -n ' >'
+        set_color yellow
+        echo -n '>'
+        set_color green --bold
+        echo -n '> '
+        set_color normal
+    end
   #+END_SRC
