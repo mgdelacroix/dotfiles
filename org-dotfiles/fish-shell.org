@@ -33,3 +33,17 @@ First of all we have to set the base PATH variable:
           emacsclient -n $argv
       end
   #+END_SRC
+
+* Fish prompt
+
+  In fish, the prompt is configured using a function called
+  =fish_prompt=. As with the other functions, we will define it in
+  the =~/.config/fish/functions/fish_prompt.fish= file.
+
+  My prompt is inspired on the one in [[http://www.youtube.com/watch?v=Uz_0i27wYbg&feature=youtu.be][this video]] (work in progress).
+
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/fish_prompt.fish :padline no
+        function fish_prompt
+            echo (prompt_pwd) '>>> '
+        end
+  #+END_SRC
