@@ -46,11 +46,11 @@ First of all we have to set the base PATH variable:
     function fish_prompt
         set_color 6C7B8B
         echo -n (prompt_pwd)
-        set_color red
+        set_color FF3030
         echo -n ' >'
-        set_color yellow
+        set_color FFFF00
         echo -n '>'
-        set_color green --bold
+        set_color 7FFF00
         echo -n '> '
         set_color normal
     end
