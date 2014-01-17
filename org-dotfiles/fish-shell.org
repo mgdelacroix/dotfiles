@@ -1,0 +1,35 @@
+#+TITLE: Fish shell
+
+First of all we have to set the base PATH variable:
+
+#+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish :padline no :mkdirp yes
+  set -x PATH /usr/local/bin /usr/bin
+#+END_SRC
+
+* Java
+
+  Added the =JAVA_HOME= variable to the environment.
+
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+    # Java
+    set -x JAVA_HOME /opt/jdk1.7.0_40
+  #+END_SRC
+
+  Added the java path.
+
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+    set -x PATH $PATH $JAVA_HOME/bin
+  #+END_SRC
+
+* Aliases
+
+  In fish, the alias are just functions defined on the shell. These
+  functions are autoloaded from the =~/.config/fish/functions=
+  directory, and the function and file names should match.
+
+  *emacs client alias*
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/e.fish :padline no :mkdirp yes
+      function e
+          emacsclient -n $argv
+      end
+  #+END_SRC
