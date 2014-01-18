@@ -55,3 +55,12 @@ First of all we have to set the base PATH variable:
         set_color normal
     end
   #+END_SRC
+
+* Cask (package manager for emacs)
+
+  The cask package manager installs itslef in the =~/.cask= folder,
+  so we have to add it =/bin= folder to the path variable.
+
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+      set -x PATH $PATH ~/.cask/bin
+  #+END_SRC
