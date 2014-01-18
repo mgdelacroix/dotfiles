@@ -34,6 +34,30 @@ First of all we have to set the base PATH variable:
       end
   #+END_SRC
 
+** Private aliases                                                    :crypt:
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+hQIOA50twMi6CP1pEAf/R4lSANYJqfustQo0LBz67OAWY43/NO0iKQwOhTqeZBV5
+ZXJhjhnV7tK1ZbdLyP5VB8fqOcr4JLnCxRVtqe4YOLZLmlgQP9K7ATsu9Z57m7dH
+Gv3ocxw6OfHa6ex7YZVo7omFS7yfvbbmoMXl8+rnr3Vf6eMsOIjklQB35qnOADSs
+zmt0umtUn8IUOkl7cJEbDbtSwz62uOR8c4RP4frgqotZZiElTiMmGeW6G61ap20D
+bX7WlT1LAJRvEBewr13/elPmY3zAQ2IKJ/mrkW3a66mzTuwCCs8QZ9siySD0jt9n
+exMLI1IPIWyuFzJoe4T61zlScKqFRQjnVWlKiUJCDgf/Wj08zHo6PCRjCWoGuNGu
+7kG2vd+fWRl4eO1UqtSPxa53EV2qBMRW9na4b2xbZF1mDXTB9f0pOHgnZHT+nOS0
+Ts9+FRWZh+YX+QDhR0oOtcA4hiTb2zFtzeI6dmT41I80RXhlzZWLRUkSmDeE8UpG
+NLPpqMQbpDZoXobx/L3tuUzJKm4WlblWp6Ls0N7/blQuhhnrEt/N16O1z0Kpp5Br
+2P1a9OGlVvJSwKHhy03mgOieQqwjPEz6U7ltZA39DwlWCT7Wy2EXAxMbdGEICZpr
+UbK48r68lzBdshc7YY0Q//UZF+BTScm+tBzDKZiTpCbGKbmsPqmCoYuis6pwD0GJ
+OdLAMAHffEGVAY22NqeJm60n7ZStIft/+VJzC11edsptTgomejtVWtkbcAhFkgG1
+AHLZDapNXLob9Inc/gT2pzvMZZ1pXw3XclnKZhFvA4WW8BWjktzRAQ5YDurvE6UE
+Fv1d20HUFUC3kBf/1JkEKhF5lXRTlEea5FdjeU/HWcrz78Nv3ptjgWUNGi3hFuTw
+NM7sc9pSbc6TaxcoaN9Ll8W3nw2CJIg2hqjFp7DhfBfREWVoForaj/cGf+3Af47A
+2g5goR6tFl6idZ1dhd+ArDRxC46MH/YeaUHkfvCIo5VzJmF9dgX36L6ipYVL7Lx3
+yXvDuA==
+=K69v
+-----END PGP MESSAGE-----
+
 * Fish prompt
 
   In fish, the prompt is configured using a function called
