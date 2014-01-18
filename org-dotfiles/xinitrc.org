@@ -23,7 +23,7 @@ A line to show in xfontsel fonts like terminus
 
   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
       while true; do
-        xsetroot -name "`volume` `battery` $(date +%R)"
+        xsetroot -name "`volume` `battery` `date +%R`"
         sleep 1s
       done &
   #+END_SRC
