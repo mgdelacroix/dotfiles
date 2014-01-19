@@ -12,7 +12,7 @@ First of all we have to set the base PATH variable:
 
   #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
     # Java
-    set -x JAVA_HOME /opt/jdk1.7.0_40
+    set -x JAVA_HOME /usr/local/opt/java/current
   #+END_SRC
 
   Added the java path.
