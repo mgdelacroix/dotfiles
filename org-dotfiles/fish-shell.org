@@ -15,10 +15,11 @@ First of all we have to set the base PATH variable:
     set -x JAVA_HOME /usr/local/opt/java/current
   #+END_SRC
 
-  Added the java path.
+  Added the java path. To avoid collisions with the local java
+  package, our java path is the first one.
 
   #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-    set -x PATH $PATH $JAVA_HOME/bin
+    set -x PATH $JAVA_HOME/bin $PATH
   #+END_SRC
 
 * Aliases
