@@ -80,6 +80,15 @@ yXvDuA==
     end
   #+END_SRC
 
+  When inside emacs, the shell has prompt issues. The following code
+  fixes the issue and is [[https://github.com/fish-shell/fish-shell/issues/107][documented here]].
+
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+    function fish_title
+        true
+    end
+  #+END_SRC
+
 * Cask (package manager for emacs)
 
   The cask package manager installs itslef in the =~/.cask= folder,
