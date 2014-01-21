@@ -22,6 +22,16 @@ First of all we have to set the base PATH variable:
     set -x PATH $JAVA_HOME/bin $PATH
   #+END_SRC
 
+** Grails
+
+   Temporal solution to use the =grails wrapper= instead of =gvm= (too dirty).
+
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/grails.fish :padline no :mkdirp yes
+     function grails
+         sh grailsw $argv
+     end
+   #+END_SRC
+
 * Aliases
 
   In fish, the alias are just functions defined on the shell. These
