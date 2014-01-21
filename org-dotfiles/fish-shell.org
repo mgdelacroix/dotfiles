@@ -28,7 +28,12 @@ First of all we have to set the base PATH variable:
 
    #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/grails.fish :padline no :mkdirp yes
      function grails
-         sh grailsw $argv
+         if test -f grailsw
+             sh grailsw $argv
+         else
+             echo '[ERROR] Grails wrapper not found'
+             return 1
+         end
      end
    #+END_SRC
 
