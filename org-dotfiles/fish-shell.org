@@ -56,6 +56,13 @@ First of all we have to set the base PATH variable:
       end
   #+END_SRC
 
+  *grails guard plugin*
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/guard.fish :padline no :mkdirp yes
+    function guard
+        grails -reloading -echoOut test-app guard: $argv
+    end
+  #+END_SRC
+
 ** Private aliases                                                    :crypt:
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
