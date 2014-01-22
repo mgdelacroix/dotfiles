@@ -37,7 +37,10 @@ First of all we have to set the base PATH variable:
    folders to the fish PATH.
 
    #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-     set -x PATH $PATH ~/.gvm/groovy/current/bin ~/.gvm/grails/current/bin ~/.gvm/gradle/current/bin ~/.gvm/springboot/current/bin
+     set gvmPrograms gaiden gradle grails griffon groovy groovyserv lazybones springboot vertx
+     for program in $gvmPrograms
+         set -x PATH $PATH ~/.gvm/$program/current/bin
+     end
    #+END_SRC
 
 * Aliases
