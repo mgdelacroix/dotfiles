@@ -22,19 +22,22 @@ First of all we have to set the base PATH variable:
     set -x PATH $JAVA_HOME/bin $PATH
   #+END_SRC
 
-** Grails
+** GVM
 
-   Temporal solution to use the =grails wrapper= instead of =gvm= (too dirty).
+   As fish shell cannot execute bash scripts, we should use a wrapper
+   to the =gvm= script.
 
-   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/grails.fish :padline no :mkdirp yes
-     function grails
-         if test -f grailsw
-             sh grailsw $argv
-         else
-             echo '[ERROR] Grails wrapper not found'
-             return 1
-         end
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/gvm.fish :padline no :mkdirp yes
+     function gvm
+         bash -c '. ~/.gvm/bin/gvm-init.sh; gvm "$@"' gvm $argv
      end
+   #+END_SRC
+
+   To use the versions managed with =gvm=, we should add the binary
+   folders to the fish PATH.
+
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+     set -x PATH $PATH ~/.gvm/groovy/current/bin ~/.gvm/grails/current/bin ~/.gvm/gradle/current/bin ~/.gvm/springboot/current/bin
    #+END_SRC
 
 * Aliases
