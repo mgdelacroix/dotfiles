@@ -63,6 +63,14 @@ First of all we have to set the base PATH variable:
     end
   #+END_SRC
 
+  *stamp*
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/stamp.fish :padline no :mkdirp yes
+    function stamp
+        set date (date)
+        git commit -a -m "$date"
+    end
+  #+END_SRC
+
 ** Private aliases                                                    :crypt:
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
