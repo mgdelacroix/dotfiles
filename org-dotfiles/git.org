@@ -1,0 +1,60 @@
+#+TITLE: Git
+
+* Gitconfig
+
+** User basic data                                                    :crypt:
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+hQIOA50twMi6CP1pEAf+Pu8i2cKIx+zYfIesuA0Oqsbi8bBHH7V0+usNAdXZxtMU
+6XxCzmkfsKvgLwYkx7FEGUgFKqD5tCEjEUViSEId4+fU4/hPYbue9fkP5CAgPFAw
+XjbYvJ3JY0m0Vf6kaTEbIhqlpWvp1pFdFJmgVYdL9kl0JyHUHs2aVi+gZ3dMOcoK
+3CRRc/869yAEHS7LtgU/ph7xnetwzMn5eVhB+76zAYB1Y9nv/ccGeP3otr/iXq1k
+J/4F8o37pjlOFnaQPnKjaTFKscchi8tbA5L8DgxUHLv+RdS5Ys60cFVRSTKMksjW
+rtLwamcgqOpmJGFfND1jr5svCOAxM48x7a+APnjzRAgAjL56TTxnvPCvDesclBB3
+jzSsFoD+pftCYEv/EBRSkFDZsrv++YOENuLGDhBAoZJiTjL5dXfU0vcVPnwuay3X
+o1r3YjSaBVExXCzpRAj210Kp+BJhiuSMYUv1MRdTT8nFZ6594BqWwsB8tiCjKtcx
+NkehGrZNHXfv/ZwyfnnFJpsM+5WXuQIAVzlINMpCo0+ZEHbkAw8+1MghyYM3lbBM
+UomOVDBiUmlYSeli9spAGVCbJJXoFVrnQflrrdqNns+UKcZovey66hE3RFOgaSTf
+jpCe0w/zASlUDG0AGUJqSvOtV3cLrdb8e2YctbkJnxOdL8cJVJMcryEJeFHWWDl0
+U9LAAwFfnSp5MqTUNsV4EfP68O2pEDi5t1zTane3wm63+oo1HbECU9gyx/pUtdfF
+rHYaJ4dzZepePmmk73p5J+czReXDdnfQ+sjlmv5nhEPQMywTEbHDLOKCSQ8FhuVv
+unmBLwdEFKgoxdkv8DXcdnXpNx3qa40lVPqz8BhVbfHElAMa572L33K6jEhG9yzz
+yfNc3g4C6rL9HvMh7fYD/pjOnyju/ShFzJ829LGKA/zIfQsd/za7/zr2iabAB3I9
+C4sENO+oag==
+=hGIz
+-----END PGP MESSAGE-----
+
+
+** Color data
+
+   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+     [color]
+       branch = auto
+       diff = auto
+       status = auto
+       ui = true
+   #+END_SRC
+
+** Aliases
+
+   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+     [alias]
+       gl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
+       wd = diff --word-diff
+       wdc = diff --word-diff --cached
+   #+END_SRC
+
+** Tools
+
+   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+     [core]
+       editor = vim
+   #+END_SRC
+
+** Sensible defaults
+
+   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+     [push]
+       default = simple
+   #+END_SRC
