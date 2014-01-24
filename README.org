@@ -1,0 +1,16 @@
+#+TITLE: Readme
+
+Sometime ago, a good friend of mine told me about emacs, org-mode and
+literate programming. After a while, I've decided to use all those
+tools together to put order among my dotfiles.
+
+This is the result.
+
+- [[fish-shell.org][Fish shell]]
+- [[git.org][Git configuration]]
+- [[mpd.org][Music Player Daemon]]
+- [[vim.org][Vim]]
+- [[xinitrc.org][xinitrc]]
+- [[xresources.org][xresources]]
+- [[misc.org][Miscellaneous configurations]]
+
