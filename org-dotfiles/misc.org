@@ -1,0 +1,7 @@
+#+TITLE: Misc
+
+Configuration files not big enough to have it's own file :)
+
+#+BEGIN_SRC shell-script :tangle ~/.vimperatorrc :padline no
+  set hintchars=hjklasdfg
+#+END_SRC
