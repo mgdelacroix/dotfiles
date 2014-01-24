@@ -1,0 +1,44 @@
+#+TITLE: Xresources
+
+No scrollbar but mouse scroll
+#+BEGIN_SRC shell-script :tangle ~/.Xresources :padline no
+  URxvt.scrollBar: false
+  URxvt*mouseWheelScrollPage: true
+#+END_SRC
+
+Font
+#+BEGIN_SRC shell-script :tangle ~/.Xresources :padline no
+  URxvt.font: xft:Inconsolata:size=13
+  URxvt.realBold: true
+  Xft.dpi: 96
+  Xft.antialias: true
+  Xft.hinting: true
+  Xft.hintstyle: 3
+#+END_SRC
+
+Login shell
+#+BEGIN_SRC shell-script :tangle ~/.Xresources :padline no
+  URxvt*loginShell: true
+#+END_SRC
+
+Clickable URL's and clipboard plugin
+#+BEGIN_SRC shell-script :tangle ~/.Xresources :padline no
+  URxvt.perl-ext-common: default,matcher,clipboard
+  URxvt.url-launcher: /usr/bin/firefox
+  URxvt.matcher.button: 1
+#+END_SRC
+
+Terminal name
+#+BEGIN_SRC shell-script :tangle ~/.Xresources :padline no
+  URxvt*termName: screen-256color
+#+END_SRC
+
+Disable ISO
+#+BEGIN_SRC shell-script :tangle ~/.Xresources :padline no
+  URxvt*iso14755: false
+#+END_SRC
+
+Emacs font
+#+BEGIN_SRC shell-script :tangle ~/.Xresources :padline no
+  Emacs.font: Inconsolata:size=18
+#+END_SRC
