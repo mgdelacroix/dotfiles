@@ -24,23 +24,12 @@ First of all we have to set the base PATH variable:
 
 ** GVM
 
-   As fish shell cannot execute bash scripts, we should use a wrapper
-   to the =gvm= script.
-
-   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/gvm.fish :padline no :mkdirp yes
-     function gvm
-         bash -c '. ~/.gvm/bin/gvm-init.sh; gvm "$@"' gvm $argv
-     end
-   #+END_SRC
-
-   To use the versions managed with =gvm=, we should add the binary
-   folders to the fish PATH.
+   We use the =gw= =gwm= wrapper to call all the =gwm=
+   applications. To set up the neccesary functions, we need to load
+   the =gwactivate= file.
 
    #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-     set gvmPrograms gaiden gradle grails griffon groovy groovyserv lazybones springboot vertx
-     for program in $gvmPrograms
-         set -x PATH $PATH ~/.gvm/$program/current/bin
-     end
+     source ~/bin/gwactivate
    #+END_SRC
 
 * Aliases
