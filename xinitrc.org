@@ -45,9 +45,9 @@ A line to show in xfontsel fonts like terminus
     emacs --daemon &
   #+END_SRC
 
-  *gpg daemon*
+  *keychain*
   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
-    gpg-agent --daemon
+    keychain --agents gpg,ssh
   #+END_SRC
 
 * Wallpaper
