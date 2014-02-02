@@ -2,5 +2,5 @@
 
 MUSIC=♪
 
-VOLUME=`amixer get Master | grep 'dB' | cut -d ' ' -f 6`
+VOLUME=`amixer get Master | awk '/Mono:/{gsub(/\[|\]/, "", $4); print $4}'`
 echo "$MUSIC $VOLUME"
