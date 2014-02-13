@@ -10,6 +10,7 @@ tools together to put order among my dotfiles.
 This is the result.
 
 - [[fish-shell.org][Fish shell]]
+- [[zsh.org][zsh shell]]
 - [[git.org][Git configuration]]
 - [[mpd.org][Music Player Daemon]]
 - [[vim.org][Vim]]
