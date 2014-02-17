@@ -76,3 +76,24 @@
   #+BEGIN_SRC shell-script :tangle ~/.zshrc
     export PATH=$PATH:~/.cask/bin
   #+END_SRC
+
+* Source files
+
+** zsh source files loading process
+
+   #+BEGIN_SRC shell-script :tangle ~/.zshrc
+     for file in ~/.zsh/*.zsh; do
+         source $file
+     done
+   #+END_SRC
+
+** modernize
+
+   #+BEGIN_SRC shell-script :tangle ~/.zsh/guard.zsh
+     modernize () {
+         sudo pacman -Syu --noconfirm
+         sudo yaourt -Syua --noconfirm
+         gw selfupdate
+         upgrade_oh_my_zsh
+     }
+   #+END_SRC
