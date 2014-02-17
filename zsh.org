@@ -71,6 +71,12 @@
     export JAVA_OPTS=-Xmx8192M
   #+END_SRC
 
+* GW
+
+  #+BEGIN_SRC shell-script :tangle ~/.zshrc
+    source ~/bin/gwactivate
+  #+END_SRC
+
 * Cask
 
   #+BEGIN_SRC shell-script :tangle ~/.zshrc
