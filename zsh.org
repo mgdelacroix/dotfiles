@@ -103,3 +103,26 @@
          upgrade_oh_my_zsh
      }
    #+END_SRC
+
+** Private functions                                                  :crypt:
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2.0.22 (GNU/Linux)
+
+hQIOA50twMi6CP1pEAgAnS+y7H9DRxd46RdVHpvl0ANL5S8HsDcugCgGZYP2R1mS
+I0++pc6Pfnga4v2Nzoos1pNbPFfwufcEQT+hw9XJRJ4DMsHkIrNTy73EQ3jf7X3W
+6vZXCmmmd9yDrTsYbinrzPzA1r2dVUUuHqB1m4IXtdBV8skXHxG/bIBh63/DzuR3
+5FYmXUAdterLp79n4SgZjQtCD7TBTsgSAGLTMd6urs9UmXSK8G/JKwA3UA0n1nn2
+lTei4rmi8WW4wtkb5Ck6+HqS7uYIlT+j2BIG0o7p3NcsxAx1YluGtWSiZVHqCfMZ
+RGPBzqESy8xyjjj09VUS08Z3n5yyYAXXaX9ortDO+Af6AwYm6JUSVvdujZK1OQw9
+dhpiCnjOhweOiJGl+3BciPUFT8DKUThDe+0Tpv01KDGgDdg70NUAZ95J2WqQyF66
+pNa6BtxbGmwXo9InYEooC7qb0aySGMvjYo44Vw1efk5iRdv7AFrSpbI6B5/HsiYx
+rM51LFI6niFAtnrUQ4devtbT6nreSri1b3EeZv8CMwmDJiuZxAUAQCIOWmgAN08L
+yYIsEr5lVaGcIR9NlB/+UmTq+d2OF2SYfAPwyAisteqPc7ZoYczgy6CXa7kXPkrb
+0nu1eJZQgS12kpr/TGr8o+P4qYkBo7dhEF6beThr4aP6fwsJVgzpZ/UOxqruL6n1
+W9K/AfTS+XhZuU1PdvXuB1GZOd7FhaYHU7f7xPFRQLJamSTp4dUTtr5jytPS14NI
+CPY2Isff1bRyEbyBfgIQyzlKk62F7oTNzpEGRyr9hEfX/gfu8jS2vDFwhP7EKjCj
+DuoigusChBtcgUEPlQX7AyyaJ9eT+/5YlBN070PU6kw199/Ch0JvRUINWRS8eqew
+brnE7F3TbKfnYyyBP7n/vi89nDgzreKOpOJLFrtGKg9mLsT63wQgDdzdJPExO8TM
+D08=
+=/SAm
+-----END PGP MESSAGE-----
