@@ -61,6 +61,7 @@
     alias -g G='| grep'
     alias stamp='git commit -m "`date`"'
     alias e='emacsclient -n'
+    alias guard='grails -reloading -echoOut test-app guard:'
   #+END_SRC
 
 * Java
@@ -95,7 +96,7 @@
 
 ** modernize
 
-   #+BEGIN_SRC shell-script :tangle ~/.zsh/guard.zsh
+   #+BEGIN_SRC shell-script :tangle ~/.zsh/modernize.zsh
      modernize () {
          sudo pacman -Syu --noconfirm
          sudo yaourt -Syua --noconfirm
