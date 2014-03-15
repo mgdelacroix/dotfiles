@@ -24,7 +24,7 @@ Login shell
 Clickable URL's and clipboard plugin
 #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
   URxvt.perl-ext-common: default,matcher,clipboard
-  URxvt.url-launcher: /usr/bin/firefox
+  URxvt.url-launcher: /usr/bin/chromium
   URxvt.matcher.button: 1
 #+END_SRC
 
