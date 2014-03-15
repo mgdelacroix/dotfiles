@@ -45,23 +45,23 @@ Emacs font
 
 Colors (from [[http://bastian.rieck.ru/blog/posts/2013/making_urxvt_beautiful/][this article]])
 #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  urxvt*foreground: white
-  urxvt*background: black
+  urxvt*foreground: #f2f2f2
+  urxvt*background: #101010
   
-  ,*color0:  #2E3436
-  ,*color1:  #a40000
-  ,*color2:  #4E9A06
-  ,*color3:  #C4A000
-  ,*color4:  #3465A4
-  ,*color5:  #75507B
-  ,*color6:  #ce5c00
-  ,*color7:  #babdb9
-  ,*color8:  #555753
-  ,*color9:  #EF2929
-  ,*color10: #8AE234
-  ,*color11: #FCE94F
-  ,*color12: #729FCF
-  ,*color13: #AD7FA8
-  ,*color14: #fcaf3e
-  ,*color15: #EEEEEC
+  urxvt*color0: #101010
+  urxvt*color1: #f13a21
+  urxvt*color2: #93f91d
+  urxvt*color3: #ffd00a
+  urxvt*color4: #004f9e
+  urxvt*color5: #ec0048
+  urxvt*color6: #2aa7e7
+  urxvt*color7: #f2f2f2
+  urxvt*color8: #1d202f
+  urxvt*color9: #ff361e
+  urxvt*color10: #ffc005
+  urxvt*color11: #93ff00
+  urxvt*color12: #0071ff
+  urxvt*color13: #ef0051
+  urxvt*color14: #4bb8fd
+  urxvt*color15: #a020f0
 #+END_SRC
