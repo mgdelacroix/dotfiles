@@ -17,4 +17,4 @@ This is the result.
 - [[xinitrc.org][xinitrc]]
 - [[xresources.org][xresources]]
 - [[misc.org][Miscellaneous configurations]]
-
+- [[tmux.org][Tmux]]

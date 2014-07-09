@@ -1,0 +1,72 @@
+#+TITLE: Tmux
+
+Config file
+
+* Prefix config
+
+  #+BEGIN_SRC shell-script :tangle ~/.tmux.conf :padline no
+    set -g prefix C-l
+    set -g base-index 1
+    bind C-l send-prefix
+    unbind C-b
+  #+END_SRC
+
+* Terminal options
+
+  #+BEGIN_SRC shell-script :tangle ~/.tmux.conf
+    set -g default-terminal "xterm"
+    set-option -g default-command zsh
+  #+END_SRC
+
+* Configuration reloading
+
+  #+BEGIN_SRC shell-script :tangle ~/.tmux.conf
+    bind r source-file ~/.tmux.conf \; display "Reloaded!"
+  #+END_SRC
+
+* Movement keybindings
+
+  #+BEGIN_SRC shell-script :tangle ~/.tmux.conf
+    bind | split-window -h
+    bind - split-window -v
+    
+    bind h select-pane -L
+    bind j select-pane -D
+    bind k select-pane -U
+    bind l select-pane -R
+
+    #bind -r C-h select-window -t :-
+    #bind -r C-l select-window -t :+
+    
+    bind -r H resize-pane -L 5
+    bind -r J resize-pane -D 5
+    bind -r K resize-pane -U 5
+    bind -r L resize-pane -R 5
+  #+END_SRC
+
+* Status Bar
+
+  #+BEGIN_SRC shell-script :tangle ~/.tmux.conf
+    set -g status-utf8 on
+    set -g status-fg white
+    set -g status-bg black
+    
+    set -g status-left "[#S]"
+    setw -g window-status-fg cyan
+    set -g window-status-current-attr underscore
+    
+    set -g status-right "\"#H\" %R #(volume) #(battery)"
+  #+END_SRC
+
+* Emacs mode-keys
+
+  #+BEGIN_SRC shell-script :tangle ~/.tmux.conf
+    set-window-option -g mode-keys emacs
+  #+END_SRC
+
+* Visual activity monitoring
+
+  #+BEGIN_SRC shell-script :tangle ~/.tmux.conf :padline no
+    setw -g monitor-activity on
+    set -g visual-activity on
+  #+END_SRC
