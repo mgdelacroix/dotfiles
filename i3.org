@@ -54,6 +54,21 @@
       bindsym $mod+n exec $filemanager
     #+END_SRC
 
+*** Lock screen
+
+    #+BEGIN_SRC conf :tangle ~/.i3/config
+      bindsym Control+Shift+l exec slock
+    #+END_SRC
+
+*** Audio
+
+**** Volume
+
+     #+BEGIN_SRC conf :tangle ~/.i3/config
+       bindsym Control+Shift+k exec "amixer set Master 1%+"
+       bindsym Control+Shift+j exec "amixer set Master 1%-"
+     #+END_SRC
+
 ** Focus and movement
 
 *** Change focus
