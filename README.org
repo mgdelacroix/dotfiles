@@ -1,5 +1,7 @@
 #+STARTUP: inlineimages
 
+* Dotfiles
+
 [[file:org-mode-logo.png]]
 
 Sometime ago, a good friend of mine told me about emacs, org-mode and
