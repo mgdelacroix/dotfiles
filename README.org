@@ -10,6 +10,7 @@ This is the result.
 
 - [[fish-shell.org][Fish shell]]
 - [[i3.org][i3]]
+- [[dunst.org][dunst]]
 - [[zsh.org][zsh shell]]
 - [[git.org][Git configuration]]
 - [[mpd.org][Music Player Daemon]]
