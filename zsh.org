@@ -74,7 +74,7 @@
 
 ** GW
 
-   #+BEGIN_SRC shell-script :tangle ~/.zshrc
+   #+BEGIN_SRC shell-script
      source ~/bin/gwactivate
    #+END_SRC
 
@@ -96,7 +96,7 @@
 
 *** modernize
 
-    #+BEGIN_SRC shell-script :tangle ~/.zsh/modernize.zsh
+    #+BEGIN_SRC shell-script :tangle ~/.zsh/modernize.zsh :padline no :mkdirp yes
       modernize () {
           sudo pacman -Syu --noconfirm
           sudo yaourt -Syua --noconfirm
