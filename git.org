@@ -1,8 +1,8 @@
-#+TITLE: Git
+* Git
 
-* Gitconfig
+** Gitconfig
 
-** User basic data                                                    :crypt:
+*** User basic data                                                   :crypt:
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
 
@@ -26,35 +26,35 @@ C4sENO+oag==
 -----END PGP MESSAGE-----
 
 
-** Color data
+*** Color data
 
-   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
-     [color]
-       branch = auto
-       diff = auto
-       status = auto
-       ui = true
-   #+END_SRC
+    #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+      [color]
+        branch = auto
+        diff = auto
+        status = auto
+        ui = true
+    #+END_SRC
 
-** Aliases
+*** Aliases
 
-   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
-     [alias]
-       gl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
-       wd = diff --word-diff
-       wdc = diff --word-diff --cached
-   #+END_SRC
+    #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+      [alias]
+        gl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
+        wd = diff --word-diff
+        wdc = diff --word-diff --cached
+    #+END_SRC
 
-** Tools
+*** Tools
 
-   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
-     [core]
-       editor = vim
-   #+END_SRC
+    #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+      [core]
+        editor = vim
+    #+END_SRC
 
-** Sensible defaults
+*** Sensible defaults
 
-   #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
-     [push]
-       default = simple
-   #+END_SRC
+    #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+      [push]
+        default = simple
+    #+END_SRC

@@ -1,66 +1,66 @@
-#+TITLE: Fish shell
+* Fish shell
 
-First of all we have to set the base PATH variable:
+  First of all we have to set the base PATH variable:
 
-#+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish :padline no :mkdirp yes
-  set -x PATH /usr/local/bin /usr/bin ~/bin
-#+END_SRC
-
-* Java
-
-  Added the =JAVA_HOME= variable to the environment.
-
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-    # Java
-    set -x JAVA_HOME /usr/local/opt/java/current
+  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish :padline no :mkdirp yes
+    set -x PATH /usr/local/bin /usr/bin ~/bin
   #+END_SRC
 
-  Added the java path. To avoid collisions with the local java
-  package, our java path is the first one.
+** Java
 
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-    set -x PATH $JAVA_HOME/bin $PATH
-  #+END_SRC
-
-** GVM
-
-   We use the =gw= =gwm= wrapper to call all the =gwm=
-   applications. To set up the neccesary functions, we need to load
-   the =gwactivate= file.
+   Added the =JAVA_HOME= variable to the environment.
 
    #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-     source ~/bin/gwactivate
+     # Java
+     set -x JAVA_HOME /usr/local/opt/java/current
    #+END_SRC
 
-* Aliases
+   Added the java path. To avoid collisions with the local java
+   package, our java path is the first one.
 
-  In fish, the alias are just functions defined on the shell. These
-  functions are autoloaded from the =~/.config/fish/functions=
-  directory, and the function and file names should match.
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+     set -x PATH $JAVA_HOME/bin $PATH
+   #+END_SRC
 
-  *emacs client alias*
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/e.fish :padline no :mkdirp yes
-      function e
-          emacsclient -n $argv
-      end
-  #+END_SRC
+*** GVM
 
-  *grails guard plugin*
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/guard.fish :padline no :mkdirp yes
-    function guard
-        grails -reloading -echoOut test-app guard: $argv
-    end
-  #+END_SRC
+    We use the =gw= =gwm= wrapper to call all the =gwm=
+    applications. To set up the neccesary functions, we need to load
+    the =gwactivate= file.
 
-  *stamp*
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/stamp.fish :padline no :mkdirp yes
-    function stamp
-        set date (date)
-        git commit -a -m "$date"
-    end
-  #+END_SRC
+    #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+      source ~/bin/gwactivate
+    #+END_SRC
 
-** Private aliases                                                    :crypt:
+** Aliases
+
+   In fish, the alias are just functions defined on the shell. These
+   functions are autoloaded from the =~/.config/fish/functions=
+   directory, and the function and file names should match.
+
+   *emacs client alias*
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/e.fish :padline no :mkdirp yes
+       function e
+           emacsclient -n $argv
+       end
+   #+END_SRC
+
+   *grails guard plugin*
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/guard.fish :padline no :mkdirp yes
+     function guard
+         grails -reloading -echoOut test-app guard: $argv
+     end
+   #+END_SRC
+
+   *stamp*
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/stamp.fish :padline no :mkdirp yes
+     function stamp
+         set date (date)
+         git commit -a -m "$date"
+     end
+   #+END_SRC
+
+*** Private aliases                                                   :crypt:
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
 
@@ -84,42 +84,42 @@ yXvDuA==
 =K69v
 -----END PGP MESSAGE-----
 
-* Fish prompt
+** Fish prompt
 
-  In fish, the prompt is configured using a function called
-  =fish_prompt=. As with the other functions, we will define it in
-  the =~/.config/fish/functions/fish_prompt.fish= file.
+   In fish, the prompt is configured using a function called
+   =fish_prompt=. As with the other functions, we will define it in
+   the =~/.config/fish/functions/fish_prompt.fish= file.
 
-  My prompt is inspired on the one in [[http://www.youtube.com/watch?v%3DUz_0i27wYbg][this video]].
+   My prompt is inspired on the one in [[http://www.youtube.com/watch?v%3DUz_0i27wYbg][this video]].
 
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/fish_prompt.fish :padline no
-    function fish_prompt
-        set_color 6C7B8B
-        echo -n (prompt_pwd)
-        set_color FF3030
-        echo -n ' >'
-        set_color FFFF00
-        echo -n '>'
-        set_color 7FFF00
-        echo -n '> '
-        set_color normal
-    end
-  #+END_SRC
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/functions/fish_prompt.fish :padline no
+     function fish_prompt
+         set_color 6C7B8B
+         echo -n (prompt_pwd)
+         set_color FF3030
+         echo -n ' >'
+         set_color FFFF00
+         echo -n '>'
+         set_color 7FFF00
+         echo -n '> '
+         set_color normal
+     end
+   #+END_SRC
 
-  When inside emacs, the shell has prompt issues. The following code
-  fixes the issue and is [[https://github.com/fish-shell/fish-shell/issues/107][documented here]].
+   When inside emacs, the shell has prompt issues. The following code
+   fixes the issue and is [[https://github.com/fish-shell/fish-shell/issues/107][documented here]].
 
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-    function fish_title
-        true
-    end
-  #+END_SRC
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+     function fish_title
+         true
+     end
+   #+END_SRC
 
-* Cask (package manager for emacs)
+** Cask (package manager for emacs)
 
-  The cask package manager installs itslef in the =~/.cask= folder,
-  so we have to add it =/bin= folder to the path variable.
+   The cask package manager installs itslef in the =~/.cask= folder,
+   so we have to add it =/bin= folder to the path variable.
 
-  #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
-      set -x PATH $PATH ~/.cask/bin
-  #+END_SRC
+   #+BEGIN_SRC shell-script :tangle ~/.config/fish/config.fish
+       set -x PATH $PATH ~/.cask/bin
+   #+END_SRC

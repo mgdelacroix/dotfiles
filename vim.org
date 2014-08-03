@@ -1,51 +1,51 @@
-#+TITLE: Vim configuration
+* Vim configuration
 
-Because I was a vimmer sometime ago, and I keep using it when I forget
-to change the appropiate environment variable.
+  Because I was a vimmer sometime ago, and I keep using it when I
+  forget to change the appropiate environment variable.
 
-Line and tabs related stuff
-#+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
-  set nocompatible
-  set rnu
-  set tabstop=4
-  set shiftwidth=4
-  set expandtab
-  set softtabstop=4
-  set autoindent
-  set smartindent
-  set cursorline
-#+END_SRC
+  Line and tabs related stuff
+  #+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
+    set nocompatible
+    set rnu
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab
+    set softtabstop=4
+    set autoindent
+    set smartindent
+    set cursorline
+  #+END_SRC
 
-Syntax, encoding and colors
-#+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
-  syntax enable
-  set encoding=utf-8
-  set t_Co=256
-  set mouse=
-  set bg=dark
-  colorscheme desert
-#+END_SRC
+  Syntax, encoding and colors
+  #+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
+    syntax enable
+    set encoding=utf-8
+    set t_Co=256
+    set mouse=
+    set bg=dark
+    colorscheme desert
+  #+END_SRC
 
-Search defaults
-#+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
-  set ignorecase
-  set smartcase
-#+END_SRC
+  Search defaults
+  #+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
+    set ignorecase
+    set smartcase
+  #+END_SRC
 
-Highlight trailing spaces
-#+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
-  highlight ExtraWhitespace ctermbg=red guibg=red
-  au InsertLeave,BufWinEnter * match ExtraWhitespace /\s\+$/
-  au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-#+END_SRC
+  Highlight trailing spaces
+  #+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    au InsertLeave,BufWinEnter * match ExtraWhitespace /\s\+$/
+    au ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+  #+END_SRC
 
-Status bar
-#+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
-  set laststatus=2
-  set noshowmode
-#+END_SRC
+  Status bar
+  #+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
+    set laststatus=2
+    set noshowmode
+  #+END_SRC
 
-Bindings
-#+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
-  inoremap jk <Esc>
-#+END_SRC
+  Bindings
+  #+BEGIN_SRC shell-script :tangle ~/.vimrc :padline no
+    inoremap jk <Esc>
+  #+END_SRC

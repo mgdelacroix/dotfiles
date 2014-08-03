@@ -1,26 +1,26 @@
-#+TITLE: MPD - Music Player Daemon
+* MPD - Music Player Daemon
 
-I have been using =spotify= to listen and organize my music, but now
-that I want to have my collection locally, I'm going to move from
-=mopidy= to raw =mpd=.
+  I have been using =spotify= to listen and organize my music, but
+  now that I want to have my collection locally, I'm going to move
+  from =mopidy= to raw =mpd=.
 
-#+BEGIN_SRC shell-script :tangle ~/.mpd/mpd.conf :padline no :mkdirp yes
-  music_directory    "~/Music"
-  playlist_directory "~/.mpd/playlists"
-  db_file            "~/.mpd/mpd.db"
-  log_file           "~/.mpd/mpd.log"
-  pid_file           "~/.mpd/mpd.pid"
-  state_file         "~/.mpd/mpdstate"
-  audio_output {
-      type  "alsa"
-      name  "ALSA device"
-  }
-#+END_SRC
+  #+BEGIN_SRC shell-script :tangle ~/.mpd/mpd.conf :padline no :mkdirp yes
+    music_directory    "~/Music"
+    playlist_directory "~/.mpd/playlists"
+    db_file            "~/.mpd/mpd.db"
+    log_file           "~/.mpd/mpd.log"
+    pid_file           "~/.mpd/mpd.pid"
+    state_file         "~/.mpd/mpdstate"
+    audio_output {
+        type  "alsa"
+        name  "ALSA device"
+    }
+  #+END_SRC
 
-Before the first launch of the =mpd= server you should execute the
-following commands:
+  Before the first launch of the =mpd= server you should execute the
+  following commands:
 
-#+BEGIN_SRC shell-script :tangle no
-  touch ~/.mpd/mpd.db
-  mkdir -p ~/.mpd/playlists
-#+END_SRC
+  #+BEGIN_SRC shell-script :tangle no
+    touch ~/.mpd/mpd.db
+    mkdir -p ~/.mpd/playlists
+  #+END_SRC

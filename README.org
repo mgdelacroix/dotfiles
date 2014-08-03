@@ -1,5 +1,4 @@
 #+STARTUP: inlineimages
-#+TITLE: Readme
 
 [[file:org-mode-logo.png]]
 
@@ -10,11 +9,12 @@ tools together to put order among my dotfiles.
 This is the result.
 
 - [[fish-shell.org][Fish shell]]
+- [[i3.org][i3]]
 - [[zsh.org][zsh shell]]
 - [[git.org][Git configuration]]
 - [[mpd.org][Music Player Daemon]]
 - [[vim.org][Vim]]
 - [[xinitrc.org][xinitrc]]
-- [[xresources.org][xresources]]
+- [[xdefaults.org][Xdefaults]]
 - [[misc.org][Miscellaneous configurations]]
 - [[tmux.org][Tmux]]

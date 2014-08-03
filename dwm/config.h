@@ -97,7 +97,7 @@ static Key keys[] = {
     { ControlMask|ShiftMask,        XK_j,      spawn,          {.v = downvol } },
     { ControlMask|ShiftMask,        XK_l,      spawn,          {.v = nextsong } },
     { ControlMask|ShiftMask,        XK_h,      spawn,          {.v = prevsong } },
-    { ControlMask|ShiftMask,        XK_p,      spawn,          {.v = togglesong } },
+    /* { ControlMask|ShiftMask,        XK_p,      spawn,          {.v = togglesong } }, */
 };
 
 /* button definitions */

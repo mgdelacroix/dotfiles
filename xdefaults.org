@@ -1,67 +1,67 @@
-#+TITLE: Xdefaults
+* Xdefaults
 
-No scrollbar but mouse scroll
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  URxvt.scrollBar: false
-  URxvt*mouseWheelScrollPage: true
-#+END_SRC
+  No scrollbar but mouse scroll
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    URxvt.scrollBar: false
+    URxvt*mouseWheelScrollPage: true
+  #+END_SRC
 
-Font
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  URxvt.font: xft:Inconsolata:size=13
-  URxvt.realBold: true
-  Xft.dpi: 96
-  Xft.antialias: true
-  Xft.hinting: true
-  Xft.hintstyle: 3
-#+END_SRC
+  Font
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    URxvt.font: xft:Inconsolata:size=13
+    URxvt.realBold: true
+    Xft.dpi: 96
+    Xft.antialias: true
+    Xft.hinting: true
+    Xft.hintstyle: 3
+  #+END_SRC
 
-Login shell
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  URxvt*loginShell: true
-#+END_SRC
+  Login shell
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    URxvt*loginShell: true
+  #+END_SRC
 
-Clickable URL's and clipboard plugin
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  URxvt.perl-ext-common: default,matcher,clipboard
-  URxvt.url-launcher: /usr/bin/chromium
-  URxvt.matcher.button: 1
-#+END_SRC
+  Clickable URL's and clipboard plugin
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    URxvt.perl-ext-common: default,matcher,clipboard
+    URxvt.url-launcher: /usr/bin/chromium
+    URxvt.matcher.button: 1
+  #+END_SRC
 
-Terminal name
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  URxvt*termName: screen-256color
-#+END_SRC
+  Terminal name
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    URxvt*termName: screen-256color
+  #+END_SRC
 
-Disable ISO
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  URxvt*iso14755: false
-#+END_SRC
+  Disable ISO
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    URxvt*iso14755: false
+  #+END_SRC
 
-Emacs font
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  Emacs.font: Inconsolata:size=18
-#+END_SRC
+  Emacs font
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    Emacs.font: Inconsolata:size=18
+  #+END_SRC
 
-Colors (from [[http://bastian.rieck.ru/blog/posts/2013/making_urxvt_beautiful/][this article]])
-#+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
-  urxvt*foreground: #f2f2f2
-  urxvt*background: #101010
-  
-  urxvt*color0: #101010
-  urxvt*color1: #f13a21
-  urxvt*color2: #93f91d
-  urxvt*color3: #ffd00a
-  urxvt*color4: #004f9e
-  urxvt*color5: #ec0048
-  urxvt*color6: #2aa7e7
-  urxvt*color7: #f2f2f2
-  urxvt*color8: #1d202f
-  urxvt*color9: #ff361e
-  urxvt*color10: #ffc005
-  urxvt*color11: #93ff00
-  urxvt*color12: #0071ff
-  urxvt*color13: #ef0051
-  urxvt*color14: #4bb8fd
-  urxvt*color15: #a020f0
-#+END_SRC
+  Colors (from [[http://bastian.rieck.ru/blog/posts/2013/making_urxvt_beautiful/][this article]])
+  #+BEGIN_SRC shell-script :tangle ~/.Xdefaults :padline no
+    urxvt*foreground: #f2f2f2
+    urxvt*background: #101010
+    
+    urxvt*color0: #101010
+    urxvt*color1: #f13a21
+    urxvt*color2: #93f91d
+    urxvt*color3: #ffd00a
+    urxvt*color4: #004f9e
+    urxvt*color5: #ec0048
+    urxvt*color6: #2aa7e7
+    urxvt*color7: #f2f2f2
+    urxvt*color8: #1d202f
+    urxvt*color9: #ff361e
+    urxvt*color10: #ffc005
+    urxvt*color11: #93ff00
+    urxvt*color12: #0071ff
+    urxvt*color13: #ef0051
+    urxvt*color14: #4bb8fd
+    urxvt*color15: #a020f0
+  #+END_SRC
