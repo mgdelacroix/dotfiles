@@ -6,6 +6,8 @@
 
    #+BEGIN_SRC conf :tangle ~/.i3/config :padline no :mkdirp yes
      set $mod Mod4
+     set $editor "emacsclient -c"
+     set $filemanager "pcmanfm"
    #+END_SRC
 
 ** Font
@@ -36,6 +38,18 @@
 
    #+BEGIN_SRC conf :tangle ~/.i3/config
      bindsym $mod+p exec dmenu_run -i -l 10 -fn "Inconsolata 13" -p λ
+   #+END_SRC
+
+** Launch editor
+
+   #+BEGIN_SRC conf :tangle ~/.i3/config
+     bindsym $mod+b exec $editor
+   #+END_SRC
+
+** Launch file manager
+
+   #+BEGIN_SRC conf :tangle ~/.i3/config
+     bindsym $mod+n exec $filemanager
    #+END_SRC
 
 ** Focus and movement
