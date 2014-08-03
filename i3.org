@@ -34,23 +34,25 @@
      bindsym $mod+Shift+c kill
    #+END_SRC
 
-** Start dmenu (a program launcher)
+** Applications
 
-   #+BEGIN_SRC conf :tangle ~/.i3/config
-     bindsym $mod+p exec dmenu_run -i -l 10 -fn "Inconsolata 13" -p λ
-   #+END_SRC
+*** Start dmenu (a program launcher)
 
-** Launch editor
+    #+BEGIN_SRC conf :tangle ~/.i3/config
+      bindsym $mod+p exec dmenu_run -i -l 10 -fn "Inconsolata 13" -p λ
+    #+END_SRC
 
-   #+BEGIN_SRC conf :tangle ~/.i3/config
-     bindsym $mod+b exec $editor
-   #+END_SRC
+*** Launch editor
 
-** Launch file manager
+    #+BEGIN_SRC conf :tangle ~/.i3/config
+      bindsym $mod+b exec $editor
+    #+END_SRC
 
-   #+BEGIN_SRC conf :tangle ~/.i3/config
-     bindsym $mod+n exec $filemanager
-   #+END_SRC
+*** Launch file manager
+
+    #+BEGIN_SRC conf :tangle ~/.i3/config
+      bindsym $mod+n exec $filemanager
+    #+END_SRC
 
 ** Focus and movement
 
@@ -89,6 +91,12 @@
        bindsym $mod+Shift+Up move up
        bindsym $mod+Shift+Right move right
      #+END_SRC
+
+*** back-and-forth
+
+    #+BEGIN_SRC conf :tangle ~/.i3/config
+      bindsym $mod+Tab workspace back_and_forth
+    #+END_SRC
 
 ** Splits
 
