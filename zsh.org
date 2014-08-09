@@ -84,6 +84,15 @@
      export PATH=$PATH:~/.cask/bin
    #+END_SRC
 
+** Python
+
+   #+BEGIN_SRC shell-script :tangle ~/.zsh/python.zsh :padline no :mkdirp yes
+     export WORKON_HOME=$HOME/.virtualenvs
+     export VIRTUALENVWRAPPER_PYTHON=`which python3`
+     
+     source `which virtualenvwrapper.sh`
+   #+END_SRC
+
 ** Source files
 
 *** zsh source files loading process
