@@ -72,10 +72,10 @@
      export JAVA_OPTS=-Xmx8192M
    #+END_SRC
 
-** GW
+** GVM
 
-   #+BEGIN_SRC shell-script
-     source ~/bin/gwactivate
+   #+BEGIN_SRC shell-script :tangle ~/.zsh/java.zsh :mkdirp yes
+     [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
    #+END_SRC
 
 ** Cask
