@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in ./*.org; do
+    emacs $file --batch --eval="(org-babel-tangle)"
+done
