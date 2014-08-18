@@ -21,7 +21,7 @@
    #+BEGIN_SRC conf :tangle ~/.i3/config
      floating_modifier $mod
    #+END_SRC
-   
+
 ** Start a terminal
 
    #+BEGIN_SRC conf :tangle ~/.i3/config
@@ -113,6 +113,12 @@
       bindsym $mod+Tab workspace back_and_forth
     #+END_SRC
 
+*** Move workspace between outputs
+
+    #+BEGIN_SRC conf :tangle ~/.i3/config
+      bindsym $mod+comma move workspace to output left
+    #+END_SRC
+
 ** Splits
 
 *** Split in horizontal orientation
@@ -128,7 +134,7 @@
     #+END_SRC
 
 ** Layout
-    
+
 *** Enter fullscreen mode for the focused container
 
     #+BEGIN_SRC conf :tangle ~/.i3/config
@@ -170,7 +176,7 @@
     #+END_SRC
 
 ** Workspaces
- 
+
 *** Switch to workspace
 
     #+BEGIN_SRC conf :tangle ~/.i3/config
@@ -228,7 +234,7 @@
     #+BEGIN_SRC conf :tangle ~/.i3/config
       mode "resize" {
               # These bindings trigger as soon as you enter the resize mode
-      
+
               # Pressing left will shrink the window’s width.
               # Pressing right will grow the window’s width.
               # Pressing up will shrink the window’s height.
@@ -237,18 +243,18 @@
               bindsym k resize grow height 10 px or 10 ppt
               bindsym l resize shrink height 10 px or 10 ppt
               bindsym semicolon resize grow width 10 px or 10 ppt
-      
+
               # same bindings, but for the arrow keys
               bindsym Left resize shrink width 10 px or 10 ppt
               bindsym Down resize grow height 10 px or 10 ppt
               bindsym Up resize shrink height 10 px or 10 ppt
               bindsym Right resize grow width 10 px or 10 ppt
-      
+
               # back to normal: Enter or Escape
               bindsym Return mode "default"
               bindsym Escape mode "default"
       }
-      
+
       bindsym $mod+r mode "resize"
     #+END_SRC
 
