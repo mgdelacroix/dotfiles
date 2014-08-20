@@ -45,7 +45,7 @@
    Old prompt
    #+BEGIN_SRC shell-script :tangle no
      autoload -U colors && colors
-     export PROMPT=%F{blue}\[%f%B%F{green}%~%f%b%F{blue}\]%f\ 
+     export PROMPT=%F{blue}\[%f%B%F{green}%~%f%b%F{blue}\]%f\
    #+END_SRC
 
 ** term
@@ -89,7 +89,7 @@
    #+BEGIN_SRC shell-script :tangle ~/.zsh/python.zsh :padline no :mkdirp yes
      export WORKON_HOME=$HOME/.virtualenvs
      export VIRTUALENVWRAPPER_PYTHON=`which python3`
-     
+
      source `which virtualenvwrapper.sh`
    #+END_SRC
 
@@ -113,6 +113,14 @@
           sudo apt-get dist-upgrade -y
           gvm selfupdate
           upgrade_oh_my_zsh
+      }
+    #+END_SRC
+
+*** Set custom keyboard map
+
+    #+BEGIN_SRC shell-script :tangle ~/.zsh/custom_keyboard_map.zsh :padline no :mkdirp yes
+      custom_keyboard_map () {
+           setxkbmap -layout us,es -variant altgr-intl, -option grp:alt_space_toggle -option grp_led:caps -option ctrl:nocaps
       }
     #+END_SRC
 
