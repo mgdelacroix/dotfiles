@@ -143,8 +143,8 @@
       }
 
       function tmux_connect_or_create_session() {
-          # If we are not inside of a TMUX
-          if [[ -z "$TMUX" ]]
+          # If we are not inside of a TMUX and are in a graphical session
+          if [[ -z "$TMUX" ]] && [[ -n "$DISPLAY" ]]
           then
               # If we have a tmux session running
               if [[ `is_tmux_running` -eq 0 ]]
