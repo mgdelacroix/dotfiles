@@ -98,7 +98,11 @@
    Script that runs keychain loading all the private keys starting
    with ~id_~
    #+BEGIN_SRC sh :tangle ~/.zsh/keychain.zsh :padline no :mkdirp yes
-     KEYS=`find ~/.ssh -type f -name "id_*" -not -name "*.pub"`
+     function find_private_ssh_keys() {
+         find ~/.ssh -type f -name "id_*" -not -name "*.pub"
+     }
+
+     KEYS=`find_private_ssh_keys`
 
      eval `keychain --quiet --eval --agents ssh $KEYS`
    #+END_SRC
@@ -118,7 +122,7 @@
 *** modernize
 
     #+BEGIN_SRC sh :tangle ~/.zsh/modernize.zsh :padline no :mkdirp yes
-      modernize () {
+      function modernize() {
           sudo apt-get update
           sudo apt-get dist-upgrade -y
           gvm selfupdate
@@ -129,7 +133,7 @@
 *** Set custom keyboard map
 
     #+BEGIN_SRC sh :tangle ~/.zsh/custom_keyboard_map.zsh :padline no :mkdirp yes
-      custom_keyboard_map () {
+      function custom_keyboard_map() {
            setxkbmap -layout us,es -variant altgr-intl, -option grp:alt_space_toggle -option grp_led:caps -option ctrl:nocaps
       }
     #+END_SRC
