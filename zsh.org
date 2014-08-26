@@ -134,6 +134,36 @@
       }
     #+END_SRC
 
+*** Tmux, connect or create session
+
+    #+BEGIN_SRC sh :tangle ~/.zsh/tmux_connect_or_create.zsh :padline no :mkdirp yes
+      function is_tmux_running() {
+          tmux ls > /dev/null 2>&1
+          echo $?
+      }
+
+      function tmux_connect_or_create_session() {
+          # If we are not inside of a TMUX
+          if [[ -z "$TMUX" ]]
+          then
+              # If we have a tmux session running
+              if [[ `is_tmux_running` -eq 0 ]]
+              then
+                  tmux at
+              else
+                  tmux
+              fi
+          fi
+      }
+    #+END_SRC
+
+    We want to execute this function when the shell loads, so we need
+    to include it after the ~.zsh~ files execution in the main
+    ~.zshrc~ file:
+    #+BEGIN_SRC sh :tangle ~/.zshrc :padline no
+      tmux_connect_or_create_session
+    #+END_SRC
+
 *** Private functions                                                 :crypt:
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v2.0.22 (GNU/Linux)
