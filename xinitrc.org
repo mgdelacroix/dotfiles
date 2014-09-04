@@ -1,12 +1,12 @@
 * xinitrc
 
   A line to show in xfontsel fonts like terminus
-  #+BEGIN_SRC shell-script :tangle ~/.xinitrc :padline no
+  #+BEGIN_SRC sh :tangle ~/.xinitrc :padline no
     xset +fp /usr/share/fonts/local
   #+END_SRC
 
   *keyboard layout*
-  #+BEGIN_SRC shell-script :tangle ~/.xinitrc
+  #+BEGIN_SRC sh :tangle ~/.xinitrc
     setxkbmap -layout us,es -variant altgr-intl, -option grp:alt_space_toggle -option grp_led:caps -option ctrl:nocaps
   #+END_SRC
 
@@ -15,13 +15,13 @@
    Before the script, the =~/bin= folder is added to the path to use
    the scripts contained in it.
 
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
        export PATH=$PATH:~/bin
    #+END_SRC
 
    The script only shows the volume, battery and date on the dwm bar.
 
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
        while true; do
          xsetroot -name "`volume` `battery` `date +%R`"
          sleep 1s
@@ -31,45 +31,51 @@
 ** Daemons
 
    *compton daemon*
-   #+BEGIN_SRC shell-script :tangle no
+   #+BEGIN_SRC sh :tangle no
      compton &
    #+END_SRC
 
    *dropbox daemon*
-   #+BEGIN_SRC shell-script :tangle no
+   #+BEGIN_SRC sh :tangle no
      dropboxd &
    #+END_SRC
 
    *emacs daemon*
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
      emacs --daemon &
    #+END_SRC
 
    *keychain*
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
      keychain --agents gpg,ssh
+   #+END_SRC
+
+** Start bittorrent sync
+
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
+     btsync
    #+END_SRC
 
 ** Wallpaper
 
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
-     feh --bg-fill ~/Pictures/wallpaper  
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
+     feh --bg-fill ~/Pictures/wallpaper
    #+END_SRC
 
 ** Java applications compatibility
 
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
      wmname LG3D
    #+END_SRC
 
 ** Deactivate bell
 
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
      xset b off
    #+END_SRC
 
 ** Window manager execution
 
-   #+BEGIN_SRC shell-script :tangle ~/.xinitrc
-       exec i3
+   #+BEGIN_SRC sh :tangle ~/.xinitrc
+     exec i3
    #+END_SRC
