@@ -25,7 +25,7 @@
 ** Start a terminal
 
    #+BEGIN_SRC conf :tangle ~/.i3/config
-     bindsym $mod+Return exec urxvt
+     bindsym $mod+Return exec gnome-terminal --hide-menubar
    #+END_SRC
 
 ** Kill focused window
