@@ -28,6 +28,14 @@
      bindsym $mod+Return exec gnome-terminal --hide-menubar
    #+END_SRC
 
+** Scratchpad
+
+   Scratchpad bindings
+   #+BEGIN_SRC conf :tangle ~/.i3/config
+     bindsym $mod+Shift+minus move scratchpad
+     bindsym $mod+grave scratchpad show
+   #+END_SRC
+
 ** Kill focused window
 
    #+BEGIN_SRC conf :tangle ~/.i3/config
