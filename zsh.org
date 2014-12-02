@@ -62,6 +62,7 @@
      alias stamp='git commit -m "`date`"'
      alias e='emacsclient -n'
      alias guard='grails -reloading -echoOut test-app guard:'
+     alias pt='py.test --tb=native'
    #+END_SRC
 
 ** Java
