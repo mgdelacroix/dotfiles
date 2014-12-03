@@ -273,3 +273,50 @@
              status_command i3status
      }
    #+END_SRC
+
+*** Config file
+
+    #+BEGIN_SRC conf :padline no :tangle ~/.i3status.conf
+      general {
+              colors = true
+              interval = 2
+      }
+
+      order += "battery 0"
+
+      order += "ethernet em1"
+
+      order += "wireless wlp3s0"
+
+      order += "tztime local"
+
+      order += "volume master"
+
+      battery 0 {
+              format = "%status %percentage %remaining"
+              path = "/sys/class/power_supply/BAT%d/uevent"
+              low_threshold = 10
+      }
+
+      ethernet em1 {
+              format_up = "E: %ip [%speed]"
+              format_down = ""
+      }
+
+      wireless wlp3s0 {
+               #format_up = "%ip [%quality %bitrate]"
+               format_up = "%ip [%quality]"
+               format_down = ""
+      }
+
+      tztime local {
+             format = "%Y-%m-%d %H:%M:%S"
+      }
+
+      volume master {
+             format = "♪ %volume"
+             device = "default"
+             mixer = "Master"
+             mixer_idx = 0
+      }
+    #+END_SRC
