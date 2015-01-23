@@ -1,0 +1,115 @@
+# click on the desktop to get menus
+OnDesktop Mouse1 :HideMenus
+OnDesktop Mouse2 :WorkspaceMenu
+OnDesktop Mouse3 :RootMenu
+
+# scroll on the desktop to change workspaces
+OnDesktop Mouse4 :PrevWorkspace
+OnDesktop Mouse5 :NextWorkspace
+
+# scroll on the toolbar to change current window
+OnToolbar Mouse4 :PrevWindow {static groups} (iconhidden=no)
+OnToolbar Mouse5 :NextWindow {static groups} (iconhidden=no)
+
+# META + left/right click to move/resize a window
+OnWindow Mod4 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindowBorder Move4 :StartMoving
+
+OnWindow Mod4 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing NearestCorner}
+OnLeftGrip Move4 :StartResizing bottomleft
+OnRightGrip Move4 :StartResizing bottomright
+
+# META + middle click to lower the window
+OnWindow Mod4 Mouse2 :Lower
+
+# control-click a window's titlebar and drag to attach windows
+OnTitlebar Control Mouse1 :StartTabbing
+
+# double click on the titlebar to shade
+OnTitlebar Double Mouse1 :Shade
+
+# left click on the titlebar to move the window
+OnTitlebar Mouse1 :MacroCmd {Raise} {Focus} {ActivateTab}
+OnTitlebar Move1  :StartMoving
+
+# middle click on the titlebar to lower
+OnTitlebar Mouse2 :Lower
+
+# right click on the titlebar for a menu of options
+OnTitlebar Mouse3 :WindowMenu
+
+# alt-tab
+Mod1 Tab :NextWindow {groups} (workspace=[current])
+Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
+
+# cycle through tabs in the current window
+Mod4 Tab :NextTab
+Mod4 Shift Tab :PrevTab
+
+# open a terminal
+Mod4 t :Exec gnome-terminal --hide-menubar
+
+# open a dialog to run programs
+Mod4 p :Exec fbrun
+
+Mod4 e :Exec emacs
+Mod4 f :Exec thunar
+
+Mod4 l :Exec slock
+
+# volume settings, using common keycodes
+# if these don't work, use xev to find out your real keycodes
+Control Mod4 k :Exec amixer sset Master,0 1+
+Control Mod4 j :Exec amixer sset Master,0 1-
+Control Mod4 m :Exec amixer sset Master,0 toggle
+
+# current window commands
+Mod1 F4 :Close
+Mod1 F5 :Kill
+Mod1 F9 :Minimize
+Mod1 F10 :Maximize
+Mod1 F11 :Fullscreen
+
+# Custom size keys
+Mod4 Up :Maximize
+Mod4 Down :Minimize
+
+# open the window menu
+Mod1 space :WindowMenu
+
+# exit fluxbox
+Control Mod1 Delete :Exit
+
+# change to previous/next workspace
+Control Mod1 Left :PrevWorkspace
+Control Mod1 Right :NextWorkspace
+
+# send the current window to previous/next workspace
+Mod4 Left :SendToPrevWorkspace
+Mod4 Right :SendToNextWorkspace
+
+# send the current window and follow it to previous/next workspace
+Control Mod4 Left :TakeToPrevWorkspace
+Control Mod4 Right :TakeToNextWorkspace
+
+# change to a specific workspace
+Mod4 1 :Workspace 1
+Mod4 2 :Workspace 2
+Mod4 3 :Workspace 3
+Mod4 4 :Workspace 4
+Mod4 5 :Workspace 5
+Mod4 6 :Workspace 6
+Mod4 7 :Workspace 7
+Mod4 8 :Workspace 8
+Mod4 9 :Workspace 9
+
+# send the current window to a specific workspace
+Mod4 Shift 1 :SendToWorkspace 1
+Mod4 Shift 2 :SendToWorkspace 2
+Mod4 Shift 3 :SendToWorkspace 3
+Mod4 Shift 4 :SendToWorkspace 4
+Mod4 Shift 5 :SendToWorkspace 5
+Mod4 Shift 6 :SendToWorkspace 6
+Mod4 Shift 7 :SendToWorkspace 7
+Mod4 Shift 8 :SendToWorkspace 8
+Mod4 Shift 9 :SendToWorkspace 9
