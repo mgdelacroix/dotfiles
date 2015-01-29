@@ -52,7 +52,7 @@ Mod4 t :Exec gnome-terminal --hide-menubar
 # open a dialog to run programs
 Mod4 p :Exec fbrun
 
-Mod4 e :Exec emacs
+Mod4 e :Exec emacsclient -c
 Mod4 f :Exec thunar
 
 Mod4 l :Exec slock
