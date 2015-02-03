@@ -50,7 +50,8 @@ Mod4 Shift Tab :PrevTab
 Mod4 t :Exec gnome-terminal --hide-menubar
 
 # open a dialog to run programs
-Mod4 p :Exec fbrun
+Mod4 p :Exec dmenu_run
+Mod4 Shift p :Exec passmenu
 
 Mod4 e :Exec emacsclient -c
 Mod4 f :Exec thunar
@@ -65,6 +66,7 @@ Control Mod4 m :Exec amixer sset Master,0 toggle
 
 # current window commands
 Mod1 F4 :Close
+Mod4 Shift c :Close
 Mod1 F5 :Kill
 Mod1 F9 :Minimize
 Mod1 F10 :Maximize
