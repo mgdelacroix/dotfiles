@@ -1,0 +1,1 @@
+setxkbmap -layout us -variant altgr-intl -option grp_led:caps -option ctrl:nocaps
