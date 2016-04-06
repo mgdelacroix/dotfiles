@@ -58,3 +58,10 @@ C4sENO+oag==
       [push]
         default = simple
     #+END_SRC
+
+*** Commit sign
+
+    #+BEGIN_SRC shell-script :tangle ~/.gitconfig :padline no
+      [commit]
+        gpgsign = true
+    #+END_SRC
